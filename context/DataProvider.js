@@ -14,7 +14,9 @@ export default function DataProvider({ children }) {
 
   useEffect(() => {
     const getDataApi = async () => {
-      const res = await fetch("http://localhost:3000/api/products");
+      const res = await fetch(
+        "https://ecommerce-practica.vercel.app/api/products"
+      );
 
       const data = await res.json();
 
