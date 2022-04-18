@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useContext } from "react";
-import { FaBars, FaTimes, FaApple, FaShoppingCart } from "react-icons/fa";
+import { FaApple, FaShoppingCart } from "react-icons/fa";
 import { DataContext } from "../context/DataProvider";
 
 export default function Header() {
@@ -23,7 +23,7 @@ export default function Header() {
           onClick={() => setEmptyCart(!emptyCart)}
           className="section bg-black-opacity blur-5 fixed-top z-index-40 d-flex justify-end "
         >
-          <div className="mr w-50 h-500px bg-white mt-80 pl pr pt radius-10px d-flex align-center justify-center f-column gap-15">
+          <div className="mr w-50 w-md-70 h-500px bg-white mt-80 pl pr pt radius-10px d-flex align-center justify-center f-column gap-15">
             <Image
               src={"/3d-flame-290.png"}
               alt={"pc"}
@@ -42,7 +42,7 @@ export default function Header() {
           onClick={() => setOpenCart(!openCart)}
           className="section bg-black-opacity blur-5 fixed-top z-index-40 d-flex justify-end "
         >
-          <div className="mr w-50 h-500px bg-white mt-80 pl pr pt radius-10px hidden overflowY relative">
+          <div className="mr w-50 w-md-70 h-500px bg-white mt-80 pl pr pt radius-10px hidden overflowY relative">
             {cart.map((inCart, i) => (
               <div key={i} className="mb d-flex align-center gap-25">
                 <img
@@ -57,7 +57,7 @@ export default function Header() {
                 </div>
               </div>
             ))}
-            <div className="bg-white w-100 h-100px d-flex align-center justify-between sticky-bottom">
+            <div className="bg-white w-100 h-100px h-md-auto d-flex align-center justify-between f-md-column gap-10 sticky-bottom pb-md">
               <h4>Total: {parseCurrency(totalPrice)}</h4>
               <button
                 onClick={() => setCart([])}

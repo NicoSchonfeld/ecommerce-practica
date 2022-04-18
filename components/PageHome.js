@@ -12,13 +12,13 @@ export default function PageHome() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="wrapper d-flex align-center justify-between z-index-20"
+          className="wrapper d-flex align-center justify-between justify-md-center z-index-20"
         >
-          <div className="d-flex f-column align-end">
-            <h2 className="text-white font-60 font-w700 family-2">
+          <div className="d-flex f-column align-end justify-md-center align-md-center">
+            <h2 className="text-white text-md-center font-60 font-md-30 line-h-md-100 font-w800 family-2">
               Love <span className="text-gradient">the power</span>
             </h2>
-            <h1 className="text-white font-80 font-w700 family-2 line-h-50">
+            <h1 className="text-white text-md-center font-80 font-w800 family-2 line-h-50">
               Apple
             </h1>
             <Link href={"#Products"}>
@@ -30,6 +30,7 @@ export default function PageHome() {
             </Link>
           </div>
           <img
+            className="d-md-none"
             src={"https://i.imgur.com/ZjLwAH9.png"}
             alt={"background apple watch"}
             width={500}
