@@ -49,7 +49,7 @@ export default function PageProducts() {
                   />
                   <div className="d-flex align-end f-column gap-15">
                     <h3 className="font-35">{product.name}</h3>
-                    <h4 className="font-w100 font-30">
+                    <h4 className="font-w300 font-30">
                       {parseCurrency(product.price)}
                     </h4>
                     <p className="text-grey">{product.description}</p>
